@@ -10,12 +10,12 @@ import MenuItem from './MenuItem';
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleOpen = useCallback(() => {
-        console.log('Llamada ala funcion toggleOpen')
+        //console.log('Llamada ala funcion toggleOpen')
         setIsOpen((value) => !value);
     }, []);
 
-    console.log('isOpen:', isOpen);
-    console.log('setIsOpen:', setIsOpen);
+    //console.log('isOpen:', isOpen);
+    //console.log('setIsOpen:', setIsOpen);
 
     return (
         <div className="relative">
@@ -86,7 +86,6 @@ import MenuItem from './MenuItem';
                                 onClick={() => {}}
                                 label='Sing up'
                             />
-                    
                         </>
                     </div>
                 </div>
