@@ -2,7 +2,8 @@ import './globals.css'
 import { Nunito } from 'next/font/google'
 import Navbar from './components/navbar/Navbar'
 import ClientOnly from './components/ClientOnly'
-import Modal from './components/modals/Modal'
+import RegisterModal from './components/modals/RegisterModal'
+import ToasterProvider from './providers/ToasterProvider'
 
 const font = Nunito({subsets:['latin']})
 
@@ -16,7 +17,9 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
     <html lang="en">
       <body className={font.className}>
         <ClientOnly>
-          <Modal title='Hello World' isOpen  />
+          <RegisterModal/>
+          {/*<Modal actionLabel='Submit' title='Hello World' isOpen  />*/}
+          <ToasterProvider/>
           <Navbar/>
         </ClientOnly>
         
